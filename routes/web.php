@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FedapayController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\VoteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/candidats', function () {
+    return view('candidates');
+});
+
+Route::resource('categories', CategoryController::class);
+Route::resource('students', StudentController::class);
+Route::resource('votes', VoteController::class);
+
+
+Route::get('process', [FedapayController::class, 'process'])->name('fedapay.process');
+Route::get('callback', [FedapayController::class, 'callback'])->name('fedapay.callback');
