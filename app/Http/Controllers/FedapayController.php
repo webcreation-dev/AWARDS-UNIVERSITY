@@ -68,11 +68,21 @@ class FedapayController extends Controller
 
 
             $student = Student::find($candidate_id);
-            Vote::create([
-                'student_id' => $student->id,
-                'count' => $count,
-                'prix' => $count * 50,
-            ]);
+
+            $vote = Vote::where('student_id', $student->id)->first();
+
+            if($vote) {
+                $vote->count = $vote->count + $count;
+                $vote->prix = $vote->prix + ($count * 50);
+                $vote->save();
+
+            }else {
+                $vote = Vote::create([
+                    'student_id' => $student->id,
+                    'count' => $count,
+                    'prix' => $count * 50,
+                ]);
+            }
 
             session()->forget('candidate', 'number');
             return view('success_vote', compact('student'));

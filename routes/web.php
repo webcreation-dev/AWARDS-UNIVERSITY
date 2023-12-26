@@ -5,6 +5,7 @@ use App\Http\Controllers\FedapayController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\VoteController;
+use App\Models\Vote;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,12 @@ Route::get('/candidats', function () {
 });
 
 Route::get('/stats', function () {
-    return view('statistics');
+
+    $votes = Vote::select('votes.*', 'students.*')
+        ->join('students', 'votes.student_id', '=', 'students.id')
+        ->get();
+
+    return view('statistics', compact('votes'));
 });
 
 Route::resource('categories', CategoryController::class);

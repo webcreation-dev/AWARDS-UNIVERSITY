@@ -14,4 +14,9 @@ class Vote extends Model
         'prix',
         'student_id',
     ];
+
+    public function student()
+    {
+        return $this->belongsTo(Student::class, 'student_id');
+    }
 }
