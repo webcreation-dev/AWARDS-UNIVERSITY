@@ -89,7 +89,9 @@
 
             <div class="about__area about2__area p-relative pt---120 pb---120"
                 style="background: url(assets/images/banner2/bg2.png) no-repeat center top;">
-
+                <div class="alert alert-success">
+                    Votre vote a été pris en compte avec succès
+                </div>
                 <div class="container about__area-width">
                     <div class="row">
                         <div class="col-lg-6">
