@@ -152,7 +152,7 @@
 
 
             <div class="about__area about2__area p-relative pt---120 pb---120"
-                style="background: url(assets/images/banner2/bg2.png) no-repeat center top;">
+                style="background: url(assets/images/banner2/bg2.png) no-repeat center top; padding-right: 10px; padding-left: 10px; ">
 
                 <div class="container about__area-width">
                     <div class="row">
