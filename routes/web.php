@@ -23,6 +23,10 @@ Route::get('/candidats', function () {
     return view('candidates');
 });
 
+Route::get('/stats', function () {
+    return view('statistics');
+});
+
 Route::resource('categories', CategoryController::class);
 Route::resource('students', StudentController::class);
 Route::resource('votes', VoteController::class);
