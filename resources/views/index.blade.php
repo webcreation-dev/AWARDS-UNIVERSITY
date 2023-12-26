@@ -55,7 +55,7 @@
                     <nav>
                         <!--================= Menu Toggle btn =================-->
                         <div class="menu-toggle">
-                            <div class="logo"><a href="/" class="logo-text"> <img src="assets/logo.png"
+                            <div class="logo"><a href="https://awards-university.ascmedias.com" class="logo-text"> <img src="assets/logo.png"
                                         alt="logo"> </a></div>
                             <button type="button" id="menu-btn">
                                 <span class="icon-bar"></span>
@@ -124,7 +124,7 @@
                                         </svg> +(402) 762 441 83 </a>
                                 </div> --}}
                                 <div class="react-logins">
-                                    <a href="#categories">
+                                    <a href="https://awards-university.ascmedias.com/">
                                         VOTEZ VOTRE CANDIDIDAT
                                         {{-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -153,6 +153,7 @@
 
             <div class="about__area about2__area p-relative pt---120 pb---120"
                 style="background: url(assets/images/banner2/bg2.png) no-repeat center top;">
+
                 <div class="container about__area-width">
                     <div class="row">
                         <div class="col-lg-6">
@@ -386,6 +387,16 @@
             <script src="assets/js/plugins.js"></script>
             <!--================= Main js =================-->
             <script src="assets/js/main.js"></script>
+
+            <script>
+                var msg = '{{Session::get('alert')}}';
+                var exist = '{{Session::has('alert')}}';
+                if(exist){
+                  alert(msg);
+                }
+              </script>
+
+
 </body>
 
 </html>

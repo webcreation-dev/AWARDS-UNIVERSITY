@@ -28,5 +28,5 @@ Route::resource('students', StudentController::class);
 Route::resource('votes', VoteController::class);
 
 
-Route::get('process', [FedapayController::class, 'process'])->name('fedapay.process');
+Route::post('process', [FedapayController::class, 'process'])->name('fedapay.process');
 Route::get('callback', [FedapayController::class, 'callback'])->name('fedapay.callback');

@@ -380,6 +380,12 @@ class StudentTableSeeder extends Seeder
             'image' => 'cat9-7.jpg',
             'category_id' => 9,
         ]);
+        Student::create([
+            'firstname' => 'Voltine',
+            'lastname' => '',
+            'image' => 'cat9-8.jpg',
+            'category_id' => 9,
+        ]);
 
         //10
 

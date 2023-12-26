@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
+use App\Models\Vote;
 use FedaPay;
 use Mockery\Exception;
 use Illuminate\Http\Request;
@@ -12,32 +14,39 @@ class FedapayController extends Controller
     public function process(Request $request)
     {
 
+        $price = $request->number * 50;
+
         $transactionData = [
 
-            "description" => "Transaction for adjilan2403@gmail.com",
-            'amount' => intval(100),
+            "description" => "VOTE AWARD UNIVERSITY",
+            'amount' => intval($price),
             'currency' => ['iso' => 'XOF'],
             'callback_url' => url('callback'),
             'customer' => [
-                "firstname" => "Julian",
-                "lastname" => "ADJIBI",
+                "firstname" => "UNSTIM",
+                "lastname" => "DASSA",
                 "email" => "adjilan2403@gmail.com",
                 'phone_number' => [
-                    'number'  => '51716504',
+                    'number'  => '64000001',
                     'country' => 'bj'
                 ]
             ]
         ];
 
-        FedaPay\FedaPay::setEnvironment("live");
-        FedaPay\FedaPay::setApiKey("sk_live_Y1qYCqcrx0JJRLMw5M9Aj8Jo");
+        FedaPay\FedaPay::setEnvironment("sandbox");
+        FedaPay\FedaPay::setApiKey("sk_sandbox_-KGmRqvYTOJiNyCi2atfDuvF");
 
 
         try {
             $transaction = FedaPay\Transaction::create($transactionData);
             $token = $transaction->generateToken();
 
+            session([
+                'candidate' => $request->myVariable,
+                'number' => $request->number,
+            ]);
             return redirect($token->url);
+
         } catch(\Exception $e) {
             return back()->with('error', $e->getMessage());
         }
@@ -46,19 +55,28 @@ class FedapayController extends Controller
 
     public function callback(Request $request)
     {
-        // dd($request->all());
-        // FedaPay\FedaPay::setEnvironment("live");
-        // FedaPay\FedaPay::setApiKey("sk_live_Y1qYCqcrx0JJRLMw5M9Aj8Jo");
-        // $transaction_id = $request->input('id');
-        // $transaction = FedaPay\Transaction::retrieve($transaction_id);
+        $candidate_id = session('candidate');
+        $count = session('number');
 
         if($request->status == 'approved') {
 
-            dd("C'est approuvé");
+
+            $student = Student::find($candidate_id);
+            Vote::create([
+                'student_id' => $student->id,
+                'count' => $count,
+                'prix' => $count * 50,
+            ]);
+
+            session()->forget('candidate', 'number');
+            return view('success_vote', compact('student'));
+
         }elseif($request->status == 'canceled'){
-            dd("C'est annulé");
+            session()->forget('candidate', 'number');
+            return back()->with('error', 'VOTRE VOTE A ÉTÉ ANNULÉ');
         }else {
-            dd("C'est échoué");
+            session()->forget('candidate', 'number');
+            return back()->with('error', 'VOTRE VOTE A ÉCHOUÉ');
         }
 
     }

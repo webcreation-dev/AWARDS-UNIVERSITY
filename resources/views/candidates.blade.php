@@ -50,7 +50,7 @@
                         <nav>
                             <!--================= Menu Toggle btn =================-->
                             <div class="menu-toggle">
-                                <div class="logo"><a href="/" class="logo-text"> <img src="{{asset('assets/logo.png')}}"
+                                <div class="logo"><a href="https://awards-university.ascmedias.com" class="logo-text"> <img src="{{asset('assets/logo.png')}}"
                                             alt="logo"> </a></div>
                                 <button type="button" id="menu-btn">
                                     <span class="icon-bar"></span>
@@ -119,7 +119,7 @@
                                             </svg> +(402) 762 441 83 </a>
                                     </div> --}}
                                     <div class="react-logins">
-                                        <a href="{{route('categories.index')}}">
+                                        <a href="https://awards-university.ascmedias.com">
                                             RETOURNER
                                             {{-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -169,18 +169,24 @@
                 <div class="react-course-filter back__course__page_grid pb---40 pt---110">
                     <div class="container pb---70">
 
+                        @if(session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
 
                         <div class="row">
                             @foreach ($candidates as $candidate)
                                 <div class="single-studies col-lg-4 grid-item">
                                     <div class="inner-course">
                                         <div class="case-img">
-                                            <a href="#" class="cate-w"><img src="{{asset('assets/images/course/beg.png')}}" alt="Beginner"> {{$candidate->firstname}} </a>
+                                            <a href="#"  class="cate-w"><img src="{{asset('assets/images/course/beg.png')}}" alt="Beginner"> {{$candidate->firstname}} </a>
                                             <img src={{asset('candidats/'. $category_id . '/'. $candidate->image )}} alt="Course Image">
                                         </div>
                                         <div class="case-content" style="align-items:center; text-align: center;">
 
-                                                <a href="#"
+                                                <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="vote" data-my-variable="{{$candidate->id}}"
                                                     style="background: #3270FC; border-radius: 6px; padding: 10px 26px; line-height: 20px; display: inline-block; color: #fff; font-weight: 600; font-size: 16px;">
                                                     VOTER
                                                     <svg fill="#ffff" height="24" width="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -197,54 +203,41 @@
                                     </div>
                                 </div>
                             @endforeach
-
-                            {{-- <div class="single-studies col-lg-4 grid-item">
-                                <div class="inner-course">
-                                    <div class="case-img">
-                                        <a href="#" class="cate-w"><img src="{{asset('assets/images/course/beg.png')}}" alt="Beginner"> Beginner</a>
-                                        <img src="{{asset('assets/images/course-filter/1.jpg')}}" alt="Course Image">
-                                    </div>
-                                    <div class="case-content" style="align-items:center; text-align: center;">
-                                            <a href="#"
-                                                style="background: #3270FC; border-radius: 6px; padding: 10px 26px; line-height: 20px; display: inline-block; color: #fff; font-weight: 600; font-size: 16px;">
-                                                VOTER
-                                                <svg fill="#ffff" height="24" width="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    viewBox="0 0 196.338 196.338" xml:space="preserve">
-                                                <g> <path d="M195.767,66.465c-0.761-1.838-2.221-3.298-4.059-4.059L63.483,9.295c-3.824-1.583-8.214,0.232-9.799,4.059L0.571,141.58
-                                                        c-0.762,1.838-0.762,3.902,0,5.74c0.761,1.838,2.221,3.298,4.059,4.059l86.104,35.665c0.919,0.38,1.895,0.571,2.87,0.571
-                                                        c0.976,0,1.951-0.19,2.87-0.571l59.566-24.676c1.838-0.761,3.298-2.221,4.059-4.059l35.667-86.105
-                                                        C196.528,70.368,196.528,68.303,195.767,66.465z M107.464,166.256l7.647-18.463l18.462,7.647L107.464,166.256z M149.112,145.639
-                                                        l-35.19-14.575c-3.823-1.583-8.214,0.232-9.799,4.059l-14.577,35.193l-72.248-29.925L64.672,26.023l114.367,47.371L149.112,145.639
-                                                        z"/> <polygon points="133.374,98.043 127.632,84.186 89.229,100.098 82.708,84.358 68.851,90.098 81.111,119.697 	"/></g> </svg>
-                                            </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-studies col-lg-4 grid-item">
-                                <div class="inner-course">
-                                    <div class="case-img">
-                                        <a href="#" class="cate-w"><img src="{{asset('assets/images/course/beg.png')}}" alt="Beginner"> Beginner</a>
-                                        <img src="{{asset('assets/images/course-filter/1.jpg')}}" alt="Course Image">
-                                    </div>
-                                    <div class="case-content" style="align-items:center; text-align: center;">
-
-                                            <a href="#"
-                                                style="background: #3270FC; border-radius: 6px; padding: 10px 26px; line-height: 20px; display: inline-block; color: #fff; font-weight: 600; font-size: 16px;">
-                                                VOTER
-                                                <svg fill="#ffff" height="24" width="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                    viewBox="0 0 196.338 196.338" xml:space="preserve">
-                                                <g> <path d="M195.767,66.465c-0.761-1.838-2.221-3.298-4.059-4.059L63.483,9.295c-3.824-1.583-8.214,0.232-9.799,4.059L0.571,141.58
-                                                        c-0.762,1.838-0.762,3.902,0,5.74c0.761,1.838,2.221,3.298,4.059,4.059l86.104,35.665c0.919,0.38,1.895,0.571,2.87,0.571
-                                                        c0.976,0,1.951-0.19,2.87-0.571l59.566-24.676c1.838-0.761,3.298-2.221,4.059-4.059l35.667-86.105
-                                                        C196.528,70.368,196.528,68.303,195.767,66.465z M107.464,166.256l7.647-18.463l18.462,7.647L107.464,166.256z M149.112,145.639
-                                                        l-35.19-14.575c-3.823-1.583-8.214,0.232-9.799,4.059l-14.577,35.193l-72.248-29.925L64.672,26.023l114.367,47.371L149.112,145.639
-                                                        z"/> <polygon points="133.374,98.043 127.632,84.186 89.229,100.098 82.708,84.358 68.851,90.098 81.111,119.697 	"/></g> </svg>
-                                            </a>
-
-                                    </div>
-                                </div>
-                            </div> --}}
                         </div>
+
+<!-- Button trigger modal -->
+{{-- <button type="button" class="btn btn-primary" >
+    Launch demo modal
+  </button> --}}
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">NOMBRE DE VOTES</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="{{route('fedapay.process')}}" method="POST" >
+            @csrf
+        <div class="modal-body">
+
+                <div class="form-group">
+                <input type="hidden" id="myHiddenInput" name="myVariable" value="">
+
+                <label for="myNumber">Nombre:</label>
+                <input type="number" class="form-control" name="number" id="myNumber" required>
+                </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-secondary">Close</button>
+        </div>
+    </form>
+      </div>
+    </div>
+  </div>
 
                     </div>
                 </div>
@@ -299,5 +292,22 @@
         <script src="{{asset('assets/js/plugins.js')}}"></script>
 		<!--================= Main js =================-->
         <script src="{{asset('assets/js/main.js')}}"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function() {
+      // Détecter le clic sur le bouton
+      $('.vote').on('click', function() {
+        // Récupérer la variable du bouton
+        var myVariableValue = $(this).data('my-variable');
+        $('#myHiddenInput').val(myVariableValue);
+        // alert('Variable récupérée : ' + myVariableValue);
+      });
+    });
+  </script>
     </body>
 </html>
