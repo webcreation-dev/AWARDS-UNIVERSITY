@@ -14,7 +14,12 @@ class VoteController extends Controller
      */
     public function index()
     {
-        
+        $votes = Vote::select('votes.*', 'students.*')
+        ->join('students', 'votes.student_id', '=', 'students.id')
+        ->get();
+
+        return view('statistics', compact('votes'));
+
     }
 
     /**
