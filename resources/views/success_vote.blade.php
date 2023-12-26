@@ -89,6 +89,7 @@
 
             <div class="about__area about2__area p-relative pt---120 pb---120"
                 style="background: url(assets/images/banner2/bg2.png) no-repeat center top;">
+                <br>
                 <div class="alert alert-success">
                     Votre vote a été pris en compte avec succès
                 </div>
@@ -105,11 +106,10 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="about__content">
-                                <br>
                                 <h2 class="about__title">
                                     <br> <em>Merci pour ton vote</em></h2>
                                 <div class="about__btn">
-                                    <a href="{{route('categories.index')}}"> CONTINUER LES VOTES
+                                    <a href="https://awards-university.ascmedias.com"> CONTINUER LES VOTES
                                     </a>
                                 </div>
                             </div>
