@@ -215,7 +215,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">NOMBRE DE VOTES</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">NOMBRE DE VOTES (2 votes minimum) </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -228,11 +228,11 @@
                 <input type="hidden" id="myHiddenInput" name="myVariable" value="">
 
                 <label for="myNumber">Nombre:</label>
-                <input type="number" class="form-control" name="number" id="myNumber" required>
+                <input type="number" class="form-control" min="2" name="number" id="myNumber" required>
                 </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-secondary">Close</button>
+          <button type="submit" class="btn btn-secondary">Voter</button>
         </div>
     </form>
       </div>
