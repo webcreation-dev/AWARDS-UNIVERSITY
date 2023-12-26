@@ -27,6 +27,7 @@ class FedapayController extends Controller
                 "lastname" => "DASSA",
                 "email" => "florentinsoglonou@gmail.com",
                 'phone_number' => [
+                    'number' => '96135159',
                     'country' => 'bj',
                 ]
             ]
@@ -39,7 +40,7 @@ class FedapayController extends Controller
         // FedaPay\FedaPay::setApiKey("sk_live_Y1qYCqcrx0JJRLMw5M9Aj8Jo");
 
         FedaPay\FedaPay::setEnvironment("live");
-        FedaPay\FedaPay::setApiKey("sk_live_SX7XU_ZFaksNUxjozc6glRWT");
+        FedaPay\FedaPay::setApiKey("sk_live_qt1NZsH3nCWEcyTaNhX8fjYU");
 
 
         try {
