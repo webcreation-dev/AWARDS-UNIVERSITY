@@ -109,7 +109,7 @@
                                 <h2 class="about__title">
                                     <br> <em>Merci pour ton vote</em></h2>
                                 <div class="about__btn">
-                                    <a href="https://awards-university.ascmedias.com"> CONTINUER LES VOTES
+                                    <a href="https://awards-university.ascmedias.com/#categories"> CONTINUER LES VOTES
                                     </a>
                                 </div>
                             </div>

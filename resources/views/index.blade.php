@@ -167,6 +167,8 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="about__content">
+                        <br>
+                                
                                 <h2 class="about__title">Grande Soirée de Detente Universitaire
                                     <br> <em>Awards University</em></h2>
                                 <p class="about__paragraph" style="text-align: justify;">Le domaine universitaire privilégie le développement académique tout en offrant l'opportunité d'acquérir des compétences pratiques telles que l'organisation, la prise de parole en public, et l'esprit d'entreprise. À l'ENSBBA, des étudiants se sont distingués par leurs compétences, et dans le cadre de la "Grande Soirée de Détente Universitaire", Florentin SOGLONOU et son équipe organisent les Awards University pour reconnaître et célébrer les étudiants influents dans le monde estudiantin. Les nominations se font dans 10 catégories différentes.</p>
