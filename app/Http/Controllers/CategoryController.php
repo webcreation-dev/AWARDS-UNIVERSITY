@@ -48,7 +48,10 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        dd($category);
+        $candidates = $category->students()->get();
+        $category_id = $category->id;
+
+        return view('candidates', compact('candidates', 'category_id'));
     }
 
     /**

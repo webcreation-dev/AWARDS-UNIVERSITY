@@ -32,27 +32,27 @@ class CategoryTableSeeder extends Seeder
             'image' => 'category4.svg',
         ]);
         Category::create([
-            'name' => 'Meilleur jeune Dévot',
+            'name' => 'Meilleur jeune basketteur',
             'image' => 'category5.svg',
         ]);
         Category::create([
-            'name' => 'Meilleur jeune basketteur',
+            'name' => 'Meilleur jeune Influenceur dynamique',
             'image' => 'category6.svg',
         ]);
         Category::create([
-            'name' => 'Meilleur Web communicateur',
+            'name' => 'Meilleur Acteur théâtral',
             'image' => 'category7.svg',
         ]);
         Category::create([
-            'name' => 'Meilleur Acteur théâtral',
+            'name' => 'Meilleur Web communicateur',
             'image' => 'category8.svg',
         ]);
         Category::create([
-            'name' => 'Meilleur jeune Influenceur dynamique',
+            'name' => 'Meilleur jeune Danseur',
             'image' => 'category9.svg',
         ]);
         Category::create([
-            'name' => 'Meilleur jeune Danseur',
+            'name' => 'Meilleur jeune Dévot',
             'image' => 'category10.svg',
         ]);
 

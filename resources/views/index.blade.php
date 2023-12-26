@@ -4,14 +4,14 @@
 <head>
     <!--================= Meta tag =================-->
     <meta charset="utf-8">
-    <title>Home | Echooling - Online Education HTML Template</title>
+    <title>Awards University | Grande Soirée de Detente Universitaire</title>
     <meta name="description" content="">
     <!--================= Responsive Tag =================-->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--================= Favicon =================-->
     <link rel="apple-touch-icon" href="assets/images/fav.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/logo1.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
     <!--================= Bootstrap V5 css =================-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!--================= Menus css =================-->
@@ -65,7 +65,7 @@
                         </div>
                         <!--================= Menu Structure =================-->
                         <div class="react-inner-menus">
-                            <ul id="backmenu" class="react-menus react-sub-shadow collapse hide-menu">
+                            {{-- <ul id="backmenu" class="react-menus react-sub-shadow collapse hide-menu">
                                 <li class="has-sub"><span class="arrow "></span> <a href="#" class="hash">Home</a>
                                     <ul class="sub-menu">
                                         <li> <a href="index.html">Home One</a></li>
@@ -110,7 +110,7 @@
                                     </ul>
                                 </li>
                                 <li class=""> <a href="contact.html">Contact</a></li>
-                            </ul>
+                            </ul> --}}
 
                             <div class="searchbar-part">
                                 {{-- <div class="phone-part">
@@ -221,7 +221,7 @@
             </div> --}}
 
             <!--================= Catagories Section Start Here =================-->
-            <div id="categories" class="catagories-section home_four-section pt---100 pb---100">
+            <div id="categories" class="catagories-section home_four-section pt---100 ">
                 <div class="container">
                     <div class="section-title">CATÉGORIES</div>
                     <div class="sub-title">Classement</div>
@@ -235,7 +235,9 @@
                                     <div class="col-md-3">
                                         <div class="item__inner">
                                             <div class="icon">
-                                                <img src={{asset('categories/'. $category->image )}} alt="Icon image">
+                                                <a href="{{route('categories.show', $category)}}">
+                                                    <img src={{asset('categories/'. $category->image )}} alt="Icon image">
+                                                </a>
                                             </div>
                                             <div class="react-content">
                                                 <h3 class="react-title"><a href="{{route('categories.show', $category)}}">{{$category->name}}</a></h3>
