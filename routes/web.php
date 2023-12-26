@@ -17,9 +17,7 @@ use App\Http\Controllers\VoteController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [CategoryController::class, 'index']);
 
 Route::get('/candidats', function () {
     return view('candidates');

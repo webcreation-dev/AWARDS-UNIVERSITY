@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--================= Favicon =================-->
     <link rel="apple-touch-icon" href="assets/images/fav.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo1.png">
     <!--================= Bootstrap V5 css =================-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!--================= Menus css =================-->
@@ -42,7 +42,7 @@
     <!--================= Preloader Section Start Here =================-->
     <div id="react__preloader">
         <div id="react__circle_loader"></div>
-        <div class="react__loader_logo"><img src="assets/images/preload.png" alt="Preload"></div>
+        <div class="react__loader_logo"><img src="assets/logo.png" alt="Preload"></div>
     </div>
     <!--================= Preloader Section End Here =================-->
 
@@ -55,7 +55,8 @@
                     <nav>
                         <!--================= Menu Toggle btn =================-->
                         <div class="menu-toggle">
-                            <div class="logo"><a href="index.html" class="logo-text"> <img src="assets/images/logo2.png" alt="logo"> </a></div>
+                            <div class="logo"><a href="/" class="logo-text"> <img src="assets/logo.png"
+                                        alt="logo"> </a></div>
                             <button type="button" id="menu-btn">
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -81,7 +82,8 @@
                                         <li> <a href="about.html">About</a></li>
                                         <li> <a href="instructors.html">Instructor</a></li>
                                         <li> <a href="profile.html">Profile</a></li>
-                                        <li class="has-sub"><span class="arrow "></span> <a href="events.html">Events</a>
+                                        <li class="has-sub"><span class="arrow "></span> <a
+                                                href="events.html">Events</a>
                                             <ul class="sub-menu">
                                                 <li><a href="events.html">Events</a></li>
                                                 <li><a href="events-right-sidebar.html">Events Sidebar</a></li>
@@ -92,7 +94,8 @@
                                         <li> <a href="signup.html">Sign Up</a></li>
                                     </ul>
                                 </li>
-                                <li class="has-sub"><span class="arrow "></span> <a href="coureses-grid.html">Courses</a>
+                                <li class="has-sub"><span class="arrow "></span> <a
+                                        href="coureses-grid.html">Courses</a>
                                     <ul class="sub-menu" style="display: none;">
                                         <li><a href="coureses-grid.html">Courses</a></li>
                                         <li><a href="coureses-right-sidebar.html">Right Sidebar</a></li>
@@ -110,12 +113,26 @@
                             </ul>
 
                             <div class="searchbar-part">
-                                <div class="phone-part">
-                                    <a href="tel:+(402)76244183"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +(402) 762 441 83 </a>
-                                </div>
+                                {{-- <div class="phone-part">
+                                    <a href="tel:+(402)76244183"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-phone">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg> +(402) 762 441 83 </a>
+                                </div> --}}
                                 <div class="react-logins">
-                                    <a href="#">
-                                        Book a visit <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    <a href="#categories">
+                                        VOTEZ VOTRE CANDIDIDAT
+                                        {{-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-arrow-right">
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                            <polyline points="12 5 19 12 12 19"></polyline>
+                                        </svg> --}}
                                     </a>
                                 </div>
                             </div>
@@ -132,30 +149,33 @@
     <div class="react-wrapper">
         <div class="react-wrapper-inner">
 
+
+
             <div class="about__area about2__area p-relative pt---120 pb---120"
-            style="background: url(assets/images/banner2/bg2.png) no-repeat center top;"
-            >
+                style="background: url(assets/images/banner2/bg2.png) no-repeat center top;">
                 <div class="container about__area-width">
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="about__image">
                                 <img class="react__shape__11" src="assets/images/about/dot.png" alt="Shape Image">
                                 <img class="react__shape__1" src="assets/images/about/shape_02.png" alt="Shape Image">
-                                <img src="assets/images/about/about22.png" alt="About">
+                                <img src="assets/banner.jpg" alt="About">
                                 <img class="react__shape__2" src="assets/images/about/shape_01.png" alt="Shape Image">
                                 <img class="react__shape__33" src="assets/images/about/shape_03.png" alt="Shape Image">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="about__content">
-                                <h2 class="about__title">One of The Largest, <br> <em>Most Online Course</em></h2>
-                                <p class="about__paragraph">Why I say old chap that is spiffing in my flat such a fibber<br> mufty mush, porkies barney pukka only a quid a what a<br> load of rubbish good time.</p>
-                                <ul>
+                                <h2 class="about__title">Grande Soirée de Detente Universitaire
+                                    <br> <em>Awards University</em></h2>
+                                <p class="about__paragraph" style="text-align: justify;">Le domaine universitaire privilégie le développement académique tout en offrant l'opportunité d'acquérir des compétences pratiques telles que l'organisation, la prise de parole en public, et l'esprit d'entreprise. À l'ENSBBA, des étudiants se sont distingués par leurs compétences, et dans le cadre de la "Grande Soirée de Détente Universitaire", Florentin SOGLONOU et son équipe organisent les Awards University pour reconnaître et célébrer les étudiants influents dans le monde estudiantin. Les nominations se font dans 10 catégories différentes.</p>
+                                {{-- <ul>
                                     <li><i class="icon_check"></i> Access more then 100K online courses</li>
                                     <li><i class="icon_check"></i> Upskill your organization. </li>
-                                </ul>
+                                </ul> --}}
                                 <div class="about__btn">
-                                    <a href="about.html"> Read More <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                                    <a href="#categories"> VOTEZ DU 27 DÉCEMBRE AU 13 JANVIER à 00H30
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -163,78 +183,71 @@
                 </div>
             </div>
 
-            <!--================= Catagories Section Start Here =================-->
-            <div class="catagories-section home_four-section pt---100 pb---100">
+            {{-- <div class="about-section-six pt---120 pb---120">
                 <div class="container">
-                    <div class="section-title">CATAGORIES</div>
-                    <div class="sub-title">Top Catagories</div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="section-title-area-six">
+                                <div class="section-pretitle">Echooling Collage &amp; University</div>
+                                <div class="section-title">About Our University
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="about-contents">
+                                <p class="fat-paragraph">Maecenas quisque similique laborum quisquam eaque incididunt
+                                    repellat proident nisl
+                                    assumenda praesentium? Class suscipit veniam dolorem wisi officiis, turpis praesent
+                                    sapien.</p>
+                                <p class="plain-paragraph">Tortor eget senectus. Porttitor facilisis temporibus
+                                    voluptates assumenda convallis augue labore
+                                    id dignissieo
+                                    mos nostrud odio, eos consequat ex magni? Quos facere bibendum wisi mus eros mattis
+                                    cum nulla
+                                    conubia
+                                    consequuntur! Hic velit similique nostrud curae diamlorem nulla blandit diamlorem
+                                    faucibus eaque
+                                    pha
+                                    retra class libero interdum elit neque adipisci auctor, esse blanditiis occaecat
+                                    etiam tristique
+                                    ultricies </p>
+                                <div class="about-btn">
+                                    <button class="home-six-btn"><a href="about.html">Read more</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+
+            <!--================= Catagories Section Start Here =================-->
+            <div id="categories" class="catagories-section home_four-section pt---100 pb---100">
+                <div class="container">
+                    <div class="section-title">CATÉGORIES</div>
+                    <div class="sub-title">Classement</div>
                     <div class="row justify-content-between align-center">
-                       <div class="col-xl-4 col-md-6 col-sm-12">
-                        <div class="catagory-item">
-                            <div class="catagory-picture">
-                                <img src="assets/images/home4/catagories/1.png" alt="catagory-picture">
-                            </div>
-                            <div class="content">
-                                <div class="item-title"><a href="coureses-grid.html">Design</a></div>
-                                <div class="info">76+ Courses</div>
-                            </div>
-                        </div>
-                       </div>
-                       <div class="col-xl-4 col-md-6 col-sm-12">
-                        <div class="catagory-item">
-                            <div class="catagory-picture">
-                                <img src="assets/images/home4/catagories/2.png" alt="catagory-picture">
-                            </div>
-                            <div class="content">
-                                <div class="item-title"><a href="coureses-grid.html">Development</a></div>
-                                <div class="info">59+ Courses</div>
-                            </div>
-                        </div>
-                       </div>
-                        <div class="col-xl-4 col-md-6 col-sm-12">
-                            <div class="catagory-item">
-                                <div class="catagory-picture">
-                                    <img src="assets/images/home4/catagories/3.png" alt="catagory-picture">
-                                </div>
-                                <div class="content">
-                                    <div class="item-title"><a href="coureses-grid.html">Marketing</a></div>
-                                    <div class="info">46+ Courses</div>
+
+                        <div class="react_populars_topics">
+                            <div class="container">
+                                <div class="row pt---30">
+
+                                @foreach ($categories as $category)
+                                    <div class="col-md-3">
+                                        <div class="item__inner">
+                                            <div class="icon">
+                                                <img src={{asset('categories/'. $category->image )}} alt="Icon image">
+                                            </div>
+                                            <div class="react-content">
+                                                <h3 class="react-title"><a href="{{route('categories.show', $category)}}">{{$category->name}}</a></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-md-6 col-sm-12">
-                            <div class="catagory-item">
-                                <div class="catagory-picture">
-                                    <img src="assets/images/home4/catagories/4.png" alt="catagory-picture">
-                                </div>
-                                <div class="content">
-                                    <div class="item-title"><a href="coureses-grid.html">Business</a></div>
-                                    <div class="info">35+ Courses</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-md-6 col-sm-12">
-                            <div class="catagory-item">
-                                <div class="catagory-picture">
-                                    <img src="assets/images/home4/catagories/5.png" alt="catagory-picture">
-                                </div>
-                                <div class="content">
-                                    <div class="item-title"><a href="coureses-grid.html">Photography</a></div>
-                                    <div class="info">25+ Courses</div>
-                                </div>
-                            </div>
-                        </div>
-                       <div class="col-xl-4 col-md-6 col-sm-12">
-                        <div class="catagory-item">
-                            <div class="catagory-picture">
-                                <img src="assets/images/home4/catagories/6.png" alt="catagory-picture">
-                            </div>
-                            <div class="content">
-                                <div class="item-title"><a href="coureses-grid.html">Music</a></div>
-                                <div class="info">10+ Courses</div>
-                            </div>
-                        </div>
-                       </div>
+
                     </div>
                 </div>
             </div>
@@ -242,37 +255,22 @@
 
 
 
-
-
-
             <!--================= Testimonials Section Start Here ================= -->
             <div class="testimonials-section-four home_four-section testimonials-style1 pt---100 pb---100">
                 <div class="container">
-                    <div class="section-title">TESTIMONIALS</div>
-                    <div class="sub-title">Trending Courses</div>
+                    <div class="section-title">PARTENAIRES</div>
+                    <div class="sub-title">Sponsors</div>
                     <div class="testimonials-section-inner">
                         <div class="swiper testimonialsSlider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="testimonials-card">
                                         <div class="profile">
-                                            <div class="dp"><img src="assets/images/home4/testimonials/1.png" alt="profile-dp">
+                                            <div class="dp"><img src="partenaires/feua.png"
+                                                    alt="profile-dp">
                                             </div>
-                                            <div class="identity">
-                                                <div class="name">Adam Levine</div>
-                                                <div class="status">Student</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonials-card">
-                                        <div class="profile">
-                                            <div class="dp"><img src="assets/images/home4/testimonials/2.png" alt="profile-card-dp">
-                                            </div>
-                                            <div class="identity">
-                                                <div class="name">Adam Levine</div>
-                                                <div class="status">Student</div>
+                                            <div class="identity" style="align-content: center;">
+                                                <div class="name">FEUA</div>
                                             </div>
                                         </div>
                                     </div>
@@ -280,27 +278,49 @@
                                 <div class="swiper-slide">
                                     <div class="testimonials-card">
                                         <div class="profile">
-                                            <div class="dp"><img src="assets/images/home4/testimonials/3.png" alt="profile-card-dp">
+                                            <div class="dp"><img src="partenaires/jego.png"
+                                                    alt="profile-card-dp">
                                             </div>
-                                            <div class="identity">
-                                                <div class="name">Adam Levine</div>
-                                                <div class="status">Student</div>
+                                            <div class="identity" style="align-content: center;">
+                                                <div class="name">JECO HOTEL</div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="testimonials-card">
                                         <div class="profile">
-                                            <div class="dp"><img src="assets/images/home4/testimonials/3.png" alt="profile-card-dp">
+                                            <div class="dp"><img src="partenaires/tsm.png"
+                                                    alt="profile-card-dp">
                                             </div>
-                                            <div class="identity">
-                                                <div class="name">Adam Levine</div>
-                                                <div class="status">Student</div>
+                                            <div class="identity" style="align-content: center;">
+                                                <div class="name">Trophée Sur Mesure</div>
                                             </div>
                                         </div>
-
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonials-card">
+                                        <div class="profile">
+                                            <div class="dp"><img src="partenaires/am.png"
+                                                    alt="profile-card-dp">
+                                            </div>
+                                            <div class="identity" style="align-content: center;">
+                                                <div class="name">Agoodjié Mag</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonials-card">
+                                        <div class="profile">
+                                            <div class="dp"><img src="partenaires/kld.png"
+                                                    alt="profile-card-dp">
+                                            </div>
+                                            <div class="identity" style="align-content: center;">
+                                                <div class="name">KL Design</div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -309,9 +329,9 @@
                 </div>
                 <div class="slider-navigation">
                     <div class="testimonials-button-prev slider-prev-btn"><i class="fa-solid fa-arrow-left-long"></i>
-                        PREV
+                        PRECEDENT
                     </div>
-                    <div class="testimonials-button-next slider-next-btn">NEXT <i
+                    <div class="testimonials-button-next slider-next-btn">SUIVANT <i
                             class="fa-solid fa-arrow-right-long"></i>
                     </div>
                 </div>
@@ -325,11 +345,10 @@
                 <div class="copyright">
                     <div class="container">
                         <div class="react-copy-left">
-                            <img src="assets/images/footer-logo2.png"
-                                                alt="logo">
-                            </div>
+                            <img src="assets/logo.png" alt="logo">
+                        </div>
                         <div class="react-copy-right">
-                            © 2022 <a href="#">Echooling.</a> All Rights Reserved
+                            © 2023 Réalisé par <a target="_blank" href="https://webcreation-dev.github.io/">WEBCREATION</a>
                         </div>
                     </div>
                 </div>

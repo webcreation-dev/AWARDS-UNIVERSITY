@@ -48,7 +48,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        // $candidates = Student::where('category_id', )
+        dd($category);
     }
 
     /**
