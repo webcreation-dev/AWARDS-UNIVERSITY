@@ -27,20 +27,19 @@ class FedapayController extends Controller
                 "lastname" => "DASSA",
                 "email" => "adjilan2403@gmail.com",
                 'phone_number' => [
-                    // 'number'  => '64000001',
                     'country' => 'bj',
                 ]
             ]
         ];
 
-        FedaPay\FedaPay::setEnvironment("sandbox");
-        FedaPay\FedaPay::setApiKey("sk_sandbox_-KGmRqvYTOJiNyCi2atfDuvF");
+        // FedaPay\FedaPay::setEnvironment("sandbox");
+        // FedaPay\FedaPay::setApiKey("sk_sandbox_-KGmRqvYTOJiNyCi2atfDuvF");
 
         // FedaPay\FedaPay::setEnvironment("live");
         // FedaPay\FedaPay::setApiKey("sk_live_Y1qYCqcrx0JJRLMw5M9Aj8Jo");
 
-        // FedaPay\FedaPay::setEnvironment("live");
-        // FedaPay\FedaPay::setApiKey("sk_live_R2ageX5UpB28xXGifeUGtNRD");
+        FedaPay\FedaPay::setEnvironment("live");
+        FedaPay\FedaPay::setApiKey("sk_live_R2ageX5UpB28xXGifeUGtNRD");
 
 
         try {
