@@ -45,13 +45,13 @@
                             <tbody>
                                 <tr>
                                     <td style="text-align: center;" ><strong>TOTAL DES VOTES</strong></td>
-                                    <td>{{$count}}</td>
+                                    <td style="text-align: center;">{{$count}}</td>
 
                                     <td style="text-align: center;" ><strong>TOTAL DES PRIX</strong></td>
-                                    <td>{{$total}}</td>
+                                    <td style="text-align: center;">{{$total}}</td>
 
                                     <td style="text-align: center;" ><strong>CANDIDATS VOTÉS</strong></td>
-                                    <td>{{$candidats}}</td>
+                                    <td style="text-align: center;">{{$candidats}} / 57</td>
 
                                     <td></td>
                                 </tr>
