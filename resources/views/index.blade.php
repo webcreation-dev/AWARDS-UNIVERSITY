@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--================= Favicon =================-->
     <link rel="apple-touch-icon" href="assets/images/fav.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo1.png">
     <!--================= Bootstrap V5 css =================-->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <!--================= Menus css =================-->

@@ -68,7 +68,6 @@ class FedapayController extends Controller
 
 
             $student = Student::find($candidate_id);
-
             $vote = Vote::where('student_id', $student->id)->first();
 
             if($vote) {

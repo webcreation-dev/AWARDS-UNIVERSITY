@@ -7,7 +7,7 @@
     <title>Statistiques | Awards University</title>
 
     <link rel="apple-touch-icon" href="assets/images/fav.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/logo1.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href={{asset('stat/css')}} rel="stylesheet" type="text/css">
