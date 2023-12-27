@@ -26,7 +26,7 @@ class FedapayController extends Controller
                 "lastname" => "DASSA",
                 "email" => "florentinsoglonou@gmail.com",
                 'phone_number' => [
-                    'number' => '',
+                    'number' => '96135159',
                     'country' => 'bj',
                 ]
             ]
