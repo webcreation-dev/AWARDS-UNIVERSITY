@@ -14,8 +14,9 @@ class VoteController extends Controller
      */
     public function index()
     {
-        $votes = Vote::select('votes.*', 'students.*')
+        $votes = Vote::select('votes.*', 'students.*', 'categories.*')
         ->join('students', 'votes.student_id', '=', 'students.id')
+        ->join('categories', 'students.category_id', '=', 'categories.id')
         ->get();
 
         return view('statistics', compact('votes'));

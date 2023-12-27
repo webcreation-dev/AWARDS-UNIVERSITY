@@ -36,6 +36,7 @@
                                     <th>&nbsp;</th>
                                     <th>CANDIDAT</th>
                                     <th>NOM</th>
+                                    <th>CATEGORIE</th>
                                     <th>VOTE</th>
                                     <th>TOTAL</th>
                                     <th>&nbsp;</th>
@@ -56,6 +57,11 @@
                                         <td>
                                             <div class="email">
                                                 <span> {{$vote->firstname}} </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="email">
+                                                <strong> {{$vote->name}} </strong>
                                             </div>
                                         </td>
                                         <td>{{$vote->count}}</td>
