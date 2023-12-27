@@ -39,7 +39,7 @@ class FedapayController extends Controller
         // FedaPay\FedaPay::setApiKey("sk_live_Y1qYCqcrx0JJRLMw5M9Aj8Jo");
 
         FedaPay\FedaPay::setEnvironment("live");
-        FedaPay\FedaPay::setApiKey("sk_live_qt1NZsH3nCWEcyTaNhX8fjYU");
+        FedaPay\FedaPay::setApiKey("sk_live_KHFRd7IhsP8iU_5J-Qut9Ghc");
 
 
 

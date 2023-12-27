@@ -18,9 +18,11 @@ class VoteController extends Controller
         ->join('students', 'votes.student_id', '=', 'students.id')
         ->join('categories', 'students.category_id', '=', 'categories.id')
         ->get();
-        // dd($votes);
 
-        return view('statistics', compact('votes'));
+        $total = Vote::sum("prix");
+        // dd($total);
+
+        return view('statistics', compact('votes', 'total'));
 
     }
 
