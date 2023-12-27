@@ -61,7 +61,7 @@
                                         </td>
                                         <td>
                                             <div class="email">
-                                                <strong> {{$vote->name}} </strong>
+                                                <strong> {{$vote->category_name}} </strong>
                                             </div>
                                         </td>
                                         <td>{{$vote->count}}</td>
