@@ -43,6 +43,11 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td colspan="5" style="text-align: center;" ><strong>TOTAL DES PRIX</strong></td>
+                                    <td><strong>{{$total}}</strong></td>
+                                    <td></td>
+                                </tr>
                                 @foreach ($votes as $vote)
                                     <tr class="alert" role="alert">
                                         <td>
@@ -74,11 +79,7 @@
                                         </td>
                                     </tr>
                                 @endforeach
-                                <tr>
-                                    <td colspan="5" style="text-align: center;" ><strong>TOTAL DES PRIX</strong></td>
-                                    <td><strong>{{$total}}</strong></td>
-                                    <td></td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
