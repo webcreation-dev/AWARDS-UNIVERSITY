@@ -185,10 +185,11 @@
                                             <img src={{asset('candidats/'. $category_id . '/'. $candidate->image )}} alt="Course Image">
                                         </div>
                                         <div class="case-content" style="align-items:center; text-align: center;">
+                                            {{-- <p>NOMBRE DE VOTE : </p> --}}
 
                                                 <a href="#" data-toggle="modal" data-target="#exampleModalCenter" class="vote" data-my-variable="{{$candidate->id}}"
                                                     style="background: #3270FC; border-radius: 6px; padding: 10px 26px; line-height: 20px; display: inline-block; color: #fff; font-weight: 600; font-size: 16px;">
-                                                    VOTER
+                                                    VOTER ( {{ App\Models\Vote::getCountVote($candidate->id) }} )
                                                     <svg fill="#ffff" height="24" width="24" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                                         viewBox="0 0 196.338 196.338" xml:space="preserve">
                                                     <g> <path d="M195.767,66.465c-0.761-1.838-2.221-3.298-4.059-4.059L63.483,9.295c-3.824-1.583-8.214,0.232-9.799,4.059L0.571,141.58
@@ -225,10 +226,9 @@
         <div class="modal-body">
 
                 <div class="form-group">
-                <input type="hidden" id="myHiddenInput" name="myVariable" value="">
-
-                <label for="myNumber">Nombre:</label>
-                <input type="number" class="form-control" min="2" name="number" id="myNumber" required>
+                    <input type="hidden" id="myHiddenInput" name="myVariable" value="">
+                    <label for="myNumber">Nombre:</label>
+                    <input type="number" class="form-control" min="2" name="number" id="myNumber" required>
                 </div>
         </div>
         <div class="modal-footer">
