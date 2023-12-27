@@ -17,7 +17,7 @@ class VoteController extends Controller
         $votes = Vote::select('votes.*', 'students.*', 'categories.name as category_name')
         ->join('students', 'votes.student_id', '=', 'students.id')
         ->join('categories', 'students.category_id', '=', 'categories.id')
-        ->orderBy('votes.count', 'asc')
+        ->orderBy('votes.prix', 'desc')
         ->get();
         $total = Vote::sum("prix");
         // dd($total);
