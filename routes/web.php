@@ -35,7 +35,7 @@ Route::get('/stats', function () {
 
 Route::resource('categories', CategoryController::class);
 Route::resource('students', StudentController::class);
-Route::resource('votes', VoteController::class);
+Route::resource('statisitques_votes', VoteController::class);
 
 
 Route::post('process', [FedapayController::class, 'process'])->name('fedapay.process');

@@ -17,7 +17,6 @@ class FedapayController extends Controller
         $price = $request->number * 50;
 
         $transactionData = [
-
             "description" => "VOTE AWARD UNIVERSITY",
             'amount' => intval($price),
             'currency' => ['iso' => 'XOF'],
@@ -27,7 +26,7 @@ class FedapayController extends Controller
                 "lastname" => "DASSA",
                 "email" => "florentinsoglonou@gmail.com",
                 'phone_number' => [
-                    'number' => '96135159',
+                    // 'number' => '96135159',
                     'country' => 'bj',
                 ]
             ]
@@ -43,7 +42,7 @@ class FedapayController extends Controller
         FedaPay\FedaPay::setApiKey("sk_live_qt1NZsH3nCWEcyTaNhX8fjYU");
 
 
-        
+
 
         try {
             $transaction = FedaPay\Transaction::create($transactionData);
