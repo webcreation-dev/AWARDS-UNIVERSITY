@@ -43,6 +43,8 @@ class FedapayController extends Controller
         FedaPay\FedaPay::setApiKey("sk_live_qt1NZsH3nCWEcyTaNhX8fjYU");
 
 
+        
+
         try {
             $transaction = FedaPay\Transaction::create($transactionData);
             $token = $transaction->generateToken();
