@@ -75,8 +75,9 @@
                                     </tr>
                                 @endforeach
                                 <tr>
-                                    <td colspan="6" >TOTAL DES PRIX</td>
-                                    <td>{{$total}}</td>
+                                    <td colspan="5" style="text-align: center;" ><strong>TOTAL DES PRIX</strong></td>
+                                    <td><strong>{{$total}}</strong></td>
+                                    <td></td>
                                 </tr>
                             </tbody>
                         </table>
