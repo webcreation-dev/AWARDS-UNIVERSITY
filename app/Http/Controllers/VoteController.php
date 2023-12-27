@@ -20,9 +20,11 @@ class VoteController extends Controller
         ->orderBy('votes.prix', 'desc')
         ->get();
         $total = Vote::sum("prix");
+        $count = Vote::sum("count");
+        $candidats = Vote::count();
         // dd($total);
 
-        return view('statistics', compact('votes', 'total'));
+        return view('statistics', compact('votes', 'total', 'candidats', 'count'));
 
     }
 

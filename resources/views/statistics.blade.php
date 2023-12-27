@@ -44,8 +44,15 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td colspan="5" style="text-align: center;" ><strong>TOTAL DES PRIX</strong></td>
-                                    <td><strong>{{$total}}</strong></td>
+                                    <td style="text-align: center;" ><strong>TOTAL DES VOTES</strong></td>
+                                    <td>{{$count}}</td>
+
+                                    <td style="text-align: center;" ><strong>TOTAL DES PRIX</strong></td>
+                                    <td>{{$total}}</td>
+
+                                    <td style="text-align: center;" ><strong>CANDIDATS VOTÉS</strong></td>
+                                    <td>{{$candidats}}</td>
+
                                     <td></td>
                                 </tr>
                                 @foreach ($votes as $vote)
