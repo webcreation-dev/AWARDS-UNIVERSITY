@@ -48,11 +48,17 @@ class FedapayController extends Controller
             $transaction = FedaPay\Transaction::create($transactionData);
             $token = $transaction->generateToken();
 
-            session([
-                'candidate' => $request->myVariable,
-                'number' => $request->number,
-            ]);
-            return redirect($token->url);
+
+            $combinedData = $request->myVariable . '|' . $request->number;
+            return redirect($token->url)->withCookie(
+                cookie('combined_data', $combinedData, 60)
+            );
+
+            // session([
+            //     'candidate' => $request->myVariable,
+            //     'number' => $request->number,
+            // ]);
+            // return redirect($token->url);
 
         } catch(\Exception $e) {
             return back()->with('error', $e->getMessage());
@@ -62,8 +68,11 @@ class FedapayController extends Controller
 
     public function callback(Request $request)
     {
-        $candidate_id = session('candidate');
-        $count = session('number');
+        // $candidate_id = session('candidate');
+        // $count = session('number');
+
+        $combinedData = $request->cookie('combined_data');
+        list($candidate_id, $count) = explode('|', $combinedData);
 
         if($request->status == 'approved') {
 
