@@ -323,7 +323,7 @@
                                                     alt="profile-card-dp">
                                             </div>
                                             <div class="identity" style="align-content: center;">
-                                                <div class="name">KL Design</div>
+                                                <div class="name">KLD Design</div>
                                             </div>
                                         </div>
                                     </div>
