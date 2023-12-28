@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\ProcessVote;
 use App\Models\Student;
 use App\Models\Vote;
 use FedaPay;
@@ -26,7 +27,7 @@ class FedapayController extends Controller
                 "lastname" => "DASSA",
                 "email" => "florentinsoglonou@gmail.com",
                 'phone_number' => [
-                    'number' => '97979797',
+                    'number' => '64000001',
                     'country' => 'bj',
                 ]
             ]
@@ -41,9 +42,6 @@ class FedapayController extends Controller
         FedaPay\FedaPay::setEnvironment("live");
         FedaPay\FedaPay::setApiKey("sk_live_KHFRd7IhsP8iU_5J-Qut9Ghc");
 
-
-
-
         try {
             $transaction = FedaPay\Transaction::create($transactionData);
             $token = $transaction->generateToken();
@@ -54,12 +52,6 @@ class FedapayController extends Controller
                 cookie('combined_data', $combinedData, 60)
             );
 
-            // session([
-            //     'candidate' => $request->myVariable,
-            //     'number' => $request->number,
-            // ]);
-            // return redirect($token->url);
-
         } catch(\Exception $e) {
             return back()->with('error', $e->getMessage());
         }
@@ -68,39 +60,19 @@ class FedapayController extends Controller
 
     public function callback(Request $request)
     {
-        // $candidate_id = session('candidate');
-        // $count = session('number');
 
         $combinedData = $request->cookie('combined_data');
+        $status = $request->status;
         list($candidate_id, $count) = explode('|', $combinedData);
 
-        if($request->status == 'approved') {
+        ProcessVote::dispatch($candidate_id, $count, $status);
 
-
+        if ($request->status == 'approved') {
             $student = Student::find($candidate_id);
-            $vote = Vote::where('student_id', $student->id)->first();
-
-            if($vote) {
-                $vote->count = $vote->count + $count;
-                $vote->prix = $vote->prix + ($count * 50);
-                $vote->save();
-
-            }else {
-                $vote = Vote::create([
-                    'student_id' => $student->id,
-                    'count' => $count,
-                    'prix' => $count * 50,
-                ]);
-            }
-
-            session()->forget('candidate', 'number');
             return view('success_vote', compact('student'));
-
-        }elseif($request->status == 'canceled'){
-            session()->forget('candidate', 'number');
+        } elseif ($request->status == 'canceled') {
             return back()->with('error', 'VOTRE VOTE A ÉTÉ ANNULÉ');
-        }else {
-            session()->forget('candidate', 'number');
+        } else {
             return back()->with('error', 'VOTRE VOTE A ÉCHOUÉ');
         }
 
