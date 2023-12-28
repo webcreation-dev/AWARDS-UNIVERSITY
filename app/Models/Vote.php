@@ -17,6 +17,10 @@ class Vote extends Model
         'student_id',
     ];
 
+    protected $casts = [
+        'prix' => 'integer',
+    ];
+
     public function student()
     {
         return $this->belongsTo(Student::class, 'student_id');

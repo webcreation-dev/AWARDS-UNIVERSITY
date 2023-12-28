@@ -14,15 +14,21 @@ class VoteController extends Controller
      */
     public function index()
     {
+        // $votes = Vote::select('votes.*', 'students.*', 'categories.name as category_name')
+        // ->join('students', 'votes.student_id', '=', 'students.id')
+        // ->join('categories', 'students.category_id', '=', 'categories.id')
+        // ->orderBy('votes.prix', 'desc')
+        // ->get();
+
         $votes = Vote::select('votes.*', 'students.*', 'categories.name as category_name')
-        ->join('students', 'votes.student_id', '=', 'students.id')
-        ->join('categories', 'students.category_id', '=', 'categories.id')
-        ->orderBy('votes.prix', 'desc')
-        ->get();
+            ->join('students', 'votes.student_id', '=', 'students.id')
+            ->join('categories', 'students.category_id', '=', 'categories.id')
+            ->orderByRaw('CAST(votes.prix AS SIGNED) DESC')
+            ->get();
+
         $total = Vote::sum("prix");
         $count = Vote::sum("count");
         $candidats = Vote::count();
-        // dd($total);
 
         return view('statistics', compact('votes', 'total', 'candidats', 'count'));
 
