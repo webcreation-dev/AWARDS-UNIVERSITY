@@ -181,7 +181,7 @@
                                 <div class="single-studies col-lg-4 grid-item">
                                     <div class="inner-course">
                                         <div class="case-img">
-                                            <a href="#"  class="cate-w"><img src="{{asset('assets/images/course/beg.png')}}" alt="Beginner"> {{$candidate->firstname}} </a>
+                                            <a href="#"  class="cate-w"><img src="{{asset('assets/images/course/beg.png')}}" alt="Beginner"> {{$candidate->id}} - {{$candidate->firstname}} </a>
                                             <img src={{asset('candidats/'. $category_id . '/'. $candidate->image )}} alt="Course Image">
                                         </div>
                                         <div class="case-content" style="align-items:center; text-align: center;">
