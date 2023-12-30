@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Student;
+use App\Models\Vote;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -14,7 +16,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('categories_classement', compact('categories'));
     }
 
     /**
@@ -22,9 +25,20 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request  $request)
     {
-        //
+
+        $category_id = $request->category;
+
+        $candidates = Vote::select('votes.*', 'students.*', 'categories.name as category_name')
+            ->where('category_id', $category_id)
+            ->join('students', 'votes.student_id', '=', 'students.id')
+            ->join('categories', 'students.category_id', '=', 'categories.id')
+            ->orderByRaw('CAST(votes.prix AS SIGNED) DESC')
+            ->take(3)
+            ->get(); // Ajout de la méthode get() pour exécuter la requête et récupérer les résultats
+
+        return view('classement_candidates', compact('candidates', 'category_id'));
     }
 
     /**
