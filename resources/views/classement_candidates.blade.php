@@ -4,7 +4,7 @@
     <head>
         <!--================= Meta tag =================-->
         <meta charset="utf-8">
-        <title>Awards University | Grande Soirée de Detente Universitaire </title>
+        <title>Classement | Awards University </title>
         <meta name="description" content="">
         <!--================= Responsive Tag =================-->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
