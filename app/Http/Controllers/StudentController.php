@@ -16,6 +16,15 @@ class StudentController extends Controller
      */
     public function index()
     {
+
+        // Sélectionnez les lignes où le calcul semble incorrect
+        $incorrectCalculations = Vote::whereRaw('prix != count * 50')->get();
+        foreach ($incorrectCalculations as $vote) {
+            $newPrix = $vote->count * 50;
+            $vote->update(['prix' => $newPrix]);
+        }
+
+
         $categories = Category::all();
         return view('categories_classement', compact('categories'));
     }
