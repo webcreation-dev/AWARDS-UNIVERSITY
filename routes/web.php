@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FedapayController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\VoteController;
 use App\Models\Vote;
@@ -36,6 +37,9 @@ Route::get('/stats', function () {
 Route::resource('categories', CategoryController::class);
 Route::resource('students', StudentController::class);
 Route::resource('statisitques_votes', VoteController::class);
+
+Route::get('pay', [PaymentController::class, 'pay'])->name('pay');
+Route::post('dopay/online', [PaymentController::class, 'handleonlinePay'])->name('dopay.online');
 
 
 Route::post('process', [FedapayController::class, 'process'])->name('fedapay.process');
