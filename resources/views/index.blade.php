@@ -177,7 +177,7 @@
                                     <li><i class="icon_check"></i> Upskill your organization. </li>
                                 </ul> --}}
                                 <div class="about__btn">
-                                    <a href="#categories"> VOTEZ DU 27 DÉCEMBRE AU 13 JANVIER à 00H30
+                                    <a href="#categories"> VOTEZ DU 27 DÉCEMBRE AU SAMEDI 13 JANVIER à 23h59min
                                     </a>
                                 </div>
                             </div>
