@@ -176,8 +176,8 @@
                                     <li><i class="icon_check"></i> Access more then 100K online courses</li>
                                     <li><i class="icon_check"></i> Upskill your organization. </li>
                                 </ul> --}}
-                                <div class="about__btn">
-                                    <a href="#categories"> VOTEZ DU 27 DÉCEMBRE AU SAMEDI 13 JANVIER à 23h59min
+                                <div class="about__btn" >
+                                    <a href="#categories" style="background: red;"> VOTEZ DU 27 DÉCEMBRE AU SAMEDI 13 JANVIER A 23H59MIN
                                     </a>
                                 </div>
                             </div>
